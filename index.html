@@ -179,15 +179,25 @@
         .card-title { font-size: 0.95rem; font-weight: 700; letter-spacing: -0.01em; }
 
         /* Experience timeline */
-        .exp-list { display: flex; flex-direction: column; gap: 1.1rem; }
-        .exp-item { display: flex; gap: 1rem; }
-        .exp-dot-wrap { display: flex; flex-direction: column; align-items: center; padding-top: 3px; }
-        .exp-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
-        .exp-line { flex: 1; width: 2px; background: var(--border); margin-top: 4px; }
-        .exp-content { flex: 1; padding-bottom: 0.5rem; }
-        .exp-role { font-size: 0.875rem; font-weight: 700; color: var(--text); }
-        .exp-meta { font-size: 0.75rem; color: var(--accent); font-weight: 500; margin-bottom: 0.3rem; }
-        .exp-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+        .exp-list { display: flex; flex-direction: column; gap: 1.4rem; }
+
+        .exp-company-block { display: flex; gap: 1rem; }
+        .exp-company-left { display: flex; flex-direction: column; align-items: center; padding-top: 3px; }
+        .exp-company-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+        .exp-company-line { flex: 1; width: 2px; background: var(--border); margin-top: 4px; }
+        .exp-company-right { flex: 1; }
+        .exp-company-name { font-size: 0.9rem; font-weight: 700; color: var(--text); margin-bottom: 0.6rem; }
+
+        .exp-roles { display: flex; flex-direction: column; gap: 0; }
+        .exp-role-item { display: flex; gap: 0.75rem; }
+        .exp-role-left { display: flex; flex-direction: column; align-items: center; padding-top: 4px; }
+        .exp-role-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent-light); border: 2px solid var(--accent); flex-shrink: 0; }
+        .exp-role-line { flex: 1; width: 2px; background: var(--border); margin-top: 3px; }
+        .exp-role-content { flex: 1; padding-bottom: 0.8rem; }
+        .exp-role { font-size: 0.82rem; font-weight: 700; color: var(--text); }
+        .exp-dates { font-size: 0.72rem; color: var(--accent); font-weight: 500; margin-top: 1px; }
+        .exp-location { font-size: 0.7rem; color: var(--muted); margin-top: 1px; }
+        .exp-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; margin-top: 0.3rem; }
 
         /* CV section */
         .cv-text {
@@ -380,33 +390,47 @@
                 <div class="card-title">Experience</div>
             </div>
             <div class="exp-list">
-                <div class="exp-item">
-                    <div class="exp-dot-wrap">
-                        <div class="exp-dot"></div>
-                        <div class="exp-line"></div>
+                <div class="exp-company-block">
+                    <div class="exp-company-left">
+                        <div class="exp-company-dot"></div>
+                        <div class="exp-company-line"></div>
                     </div>
-                    <div class="exp-content">
-                        <div class="exp-role">Data Engineer</div>
-                        <div class="exp-meta">Prozis · jan 2026 – presente · 3 meses · Chipre</div>
-                    </div>
-                </div>
-                <div class="exp-item">
-                    <div class="exp-dot-wrap">
-                        <div class="exp-dot" style="background:#a78bfa"></div>
-                        <div class="exp-line"></div>
-                    </div>
-                    <div class="exp-content">
-                        <div class="exp-role">Data Analyst</div>
-                        <div class="exp-meta">Prozis · set 2022 – dez 2025 · 3 anos 4 meses · Maia, Porto, Portugal</div>
-                    </div>
-                </div>
-                <div class="exp-item">
-                    <div class="exp-dot-wrap">
-                        <div class="exp-dot" style="background:#c4b5fd"></div>
-                    </div>
-                    <div class="exp-content">
-                        <div class="exp-role">Business Intelligence Analyst <span style="font-size:0.7rem;font-weight:500;color:var(--muted)">(Estágio)</span></div>
-                        <div class="exp-meta">Prozis · mar 2022 – set 2022 · 7 meses · Maia, Porto, Portugal</div>
+                    <div class="exp-company-right">
+                        <div class="exp-company-name">Prozis</div>
+                        <div class="exp-roles">
+                            <div class="exp-role-item">
+                                <div class="exp-role-left">
+                                    <div class="exp-role-dot"></div>
+                                    <div class="exp-role-line"></div>
+                                </div>
+                                <div class="exp-role-content">
+                                    <div class="exp-role">Data Engineer</div>
+                                    <div class="exp-dates">jan 2026 – presente · 3 meses</div>
+                                    <div class="exp-location">Chipre</div>
+                                </div>
+                            </div>
+                            <div class="exp-role-item">
+                                <div class="exp-role-left">
+                                    <div class="exp-role-dot"></div>
+                                    <div class="exp-role-line"></div>
+                                </div>
+                                <div class="exp-role-content">
+                                    <div class="exp-role">Data Analyst</div>
+                                    <div class="exp-dates">set 2022 – dez 2025 · 3 anos 4 meses</div>
+                                    <div class="exp-location">Maia, Porto, Portugal</div>
+                                </div>
+                            </div>
+                            <div class="exp-role-item">
+                                <div class="exp-role-left">
+                                    <div class="exp-role-dot"></div>
+                                </div>
+                                <div class="exp-role-content">
+                                    <div class="exp-role">Business Intelligence Analyst <span style="font-size:0.68rem;font-weight:500;color:var(--muted)">(Estágio)</span></div>
+                                    <div class="exp-dates">mar 2022 – set 2022 · 7 meses</div>
+                                    <div class="exp-location">Maia, Porto, Portugal</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
